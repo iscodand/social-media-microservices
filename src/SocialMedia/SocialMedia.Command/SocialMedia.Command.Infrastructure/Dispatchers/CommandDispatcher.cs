@@ -21,7 +21,7 @@ namespace SocialMedia.Command.Infrastructure.Dispatchers
         {
             if (!_handlers.TryGetValue(command.GetType(), out Func<BaseCommand, Task> handler))
             {
-                throw new ArgumentNullException(nameof(handler), "No command handler was registered ");
+                throw new ArgumentNullException(nameof(handler), "No command handler was registered");
             }
 
             await handler(command);
