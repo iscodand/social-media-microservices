@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CQRS", "CQRS", "{4DCEC324-84D8-4B2B-B878-E39D0510152A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Core", "CQRS\CQRS.Core\CQRS.Core.csproj", "{6B79822E-B955-4E7F-B58D-38C07C43E72D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SocialMedia", "SocialMedia", "{03ECECE0-C062-441D-A0D8-2DBE35AB6E45}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SocialMedia.Command", "SocialMedia.Command", "{C8A58EAC-079B-4153-B8DF-F163699A9672}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMedia.Command.Domain", "SocialMedia\SocialMedia.Command\SocialMedia.Command.Domain\SocialMedia.Command.Domain.csproj", "{3D2304F4-151C-43EB-B96C-05CEA7322713}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMedia.Command.Infrastructure", "SocialMedia\SocialMedia.Command\SocialMedia.Command.Infrastructure\SocialMedia.Command.Infrastructure.csproj", "{5FA7B182-C051-41FF-A8DD-E12ABC7B680B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMedia.Command.WebApi", "SocialMedia\SocialMedia.Command\SocialMedia.Command.WebApi\SocialMedia.Command.WebApi.csproj", "{153F59A2-CCA1-49DD-9CCA-8BFDCD520276}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMedia.Common", "SocialMedia\SocialMedia.Common\SocialMedia.Common.csproj", "{A806120E-64D3-4A4B-A1A9-668761ED7227}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SocialMedia.Query", "SocialMedia.Query", "{D7029AC6-B0FC-4479-A988-FD5C5B526718}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMedia.Query.Domain", "SocialMedia\SocialMedia.Query\SocialMedia.Query.Domain\SocialMedia.Query.Domain.csproj", "{32723783-A01D-4DBB-97B8-24BF0A2B91C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMedia.Query.Infrastructure", "SocialMedia\SocialMedia.Query\SocialMedia.Query.Infrastructure\SocialMedia.Query.Infrastructure.csproj", "{2E7BD071-4FD4-4534-AE47-3C4E3FDD181C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMedia.Query.WebApi", "SocialMedia\SocialMedia.Query\SocialMedia.Query.WebApi\SocialMedia.Query.WebApi.csproj", "{F31A580F-7DE7-4319-A329-8E1E352B65BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B79822E-B955-4E7F-B58D-38C07C43E72D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B79822E-B955-4E7F-B58D-38C07C43E72D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B79822E-B955-4E7F-B58D-38C07C43E72D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B79822E-B955-4E7F-B58D-38C07C43E72D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D2304F4-151C-43EB-B96C-05CEA7322713}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D2304F4-151C-43EB-B96C-05CEA7322713}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D2304F4-151C-43EB-B96C-05CEA7322713}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D2304F4-151C-43EB-B96C-05CEA7322713}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FA7B182-C051-41FF-A8DD-E12ABC7B680B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FA7B182-C051-41FF-A8DD-E12ABC7B680B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FA7B182-C051-41FF-A8DD-E12ABC7B680B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FA7B182-C051-41FF-A8DD-E12ABC7B680B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{153F59A2-CCA1-49DD-9CCA-8BFDCD520276}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{153F59A2-CCA1-49DD-9CCA-8BFDCD520276}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{153F59A2-CCA1-49DD-9CCA-8BFDCD520276}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{153F59A2-CCA1-49DD-9CCA-8BFDCD520276}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A806120E-64D3-4A4B-A1A9-668761ED7227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A806120E-64D3-4A4B-A1A9-668761ED7227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A806120E-64D3-4A4B-A1A9-668761ED7227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A806120E-64D3-4A4B-A1A9-668761ED7227}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32723783-A01D-4DBB-97B8-24BF0A2B91C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32723783-A01D-4DBB-97B8-24BF0A2B91C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32723783-A01D-4DBB-97B8-24BF0A2B91C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32723783-A01D-4DBB-97B8-24BF0A2B91C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E7BD071-4FD4-4534-AE47-3C4E3FDD181C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E7BD071-4FD4-4534-AE47-3C4E3FDD181C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E7BD071-4FD4-4534-AE47-3C4E3FDD181C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E7BD071-4FD4-4534-AE47-3C4E3FDD181C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F31A580F-7DE7-4319-A329-8E1E352B65BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F31A580F-7DE7-4319-A329-8E1E352B65BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F31A580F-7DE7-4319-A329-8E1E352B65BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F31A580F-7DE7-4319-A329-8E1E352B65BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6B79822E-B955-4E7F-B58D-38C07C43E72D} = {4DCEC324-84D8-4B2B-B878-E39D0510152A}
+		{C8A58EAC-079B-4153-B8DF-F163699A9672} = {03ECECE0-C062-441D-A0D8-2DBE35AB6E45}
+		{3D2304F4-151C-43EB-B96C-05CEA7322713} = {C8A58EAC-079B-4153-B8DF-F163699A9672}
+		{5FA7B182-C051-41FF-A8DD-E12ABC7B680B} = {C8A58EAC-079B-4153-B8DF-F163699A9672}
+		{153F59A2-CCA1-49DD-9CCA-8BFDCD520276} = {C8A58EAC-079B-4153-B8DF-F163699A9672}
+		{A806120E-64D3-4A4B-A1A9-668761ED7227} = {03ECECE0-C062-441D-A0D8-2DBE35AB6E45}
+		{D7029AC6-B0FC-4479-A988-FD5C5B526718} = {03ECECE0-C062-441D-A0D8-2DBE35AB6E45}
+		{32723783-A01D-4DBB-97B8-24BF0A2B91C7} = {D7029AC6-B0FC-4479-A988-FD5C5B526718}
+		{2E7BD071-4FD4-4534-AE47-3C4E3FDD181C} = {D7029AC6-B0FC-4479-A988-FD5C5B526718}
+		{F31A580F-7DE7-4319-A329-8E1E352B65BF} = {D7029AC6-B0FC-4479-A988-FD5C5B526718}
+	EndGlobalSection
+EndGlobal
