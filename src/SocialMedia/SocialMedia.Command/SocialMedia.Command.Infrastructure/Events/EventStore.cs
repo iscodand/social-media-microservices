@@ -15,7 +15,7 @@ namespace SocialMedia.Command.Infrastructure.Events
             _eventStoreRepository = eventStoreRepository;
         }
 
-        public async Task<List<BaseEvent>> GetEventsAsync(string aggregateId)
+        public async Task<List<BaseEvent>> GetEventsAsync(Guid aggregateId)
         {
             List<EventModel> eventStream = await _eventStoreRepository.GetAggregateByIdAsync(aggregateId);
 
@@ -31,7 +31,7 @@ namespace SocialMedia.Command.Infrastructure.Events
             return eventData;
         }
 
-        public async Task SaveEventsAsync(string aggregateId, IEnumerable<BaseEvent> events, int expectedVersion)
+        public async Task SaveEventsAsync(Guid aggregateId, IEnumerable<BaseEvent> events, int expectedVersion)
         {
             List<EventModel> eventStream = await _eventStoreRepository.GetAggregateByIdAsync(aggregateId);
 
