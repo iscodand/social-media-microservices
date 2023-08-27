@@ -18,7 +18,7 @@ namespace SocialMedia.Command.Infrastructure.Repositories
             _eventStoreCollection = mongoDatabase.GetCollection<EventModel>(options.Value.Collection);
         }
 
-        public async Task<List<EventModel>> GetAggregateByIdAsync(string aggregateId)
+        public async Task<List<EventModel>> GetAggregateByIdAsync(Guid aggregateId)
         {
             return await _eventStoreCollection
                                     .Find(x => x.AggregateIdentifier == aggregateId)
