@@ -1,7 +1,7 @@
 version: '3.9'
 
-# todo => add mongoDB and this API image for the fucking docker-compose
-#      => also maybe work with K8s in this project
+# todo => maybe work with K8s in this project
+
 services:
   zookeeper:
     image: bitnami/zookeeper:latest
@@ -27,11 +27,37 @@ services:
       - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092
     depends_on:
       - zookeeper
+      - mongodb
+      - mssql-server
+
+  mongodb:
+    image: mongo:latest
+    user: root
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - "mongodb_data:/data/db"
+
+  mssql-server:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    user: root
+    volumes:
+      - mssqlserver_data:/var/opt/mssql/data
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Testing123!
+    ports:
+      - "1433:1433"
 
 volumes:
   zookeeper_data:
     driver: local
   kafka_data:
+    driver: local
+  mongodb_data:
+    driver: local
+  mssqlserver_data:
     driver: local
 
 networks:
