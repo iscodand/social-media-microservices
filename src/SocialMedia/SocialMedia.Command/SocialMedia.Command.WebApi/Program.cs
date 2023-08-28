@@ -9,6 +9,8 @@ using SocialMedia.Command.Infrastructure.Repositories;
 using SocialMedia.Command.WebApi.Commands;
 using Confluent.Kafka;
 using SocialMedia.Command.Infrastructure.Dispatchers;
+using CQRS.Core.Producers;
+using SocialMedia.Command.Producers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +22,7 @@ builder.Services.Configure<ProducerConfig>(builder.Configuration.GetSection(name
 
 // Dependency Injection
 builder.Services.AddScoped<IEventStoreRepository, EventStoreRepository>();
+builder.Services.AddScoped<IEventProducer, EventProducer>();
 builder.Services.AddScoped<IEventStore, EventStore>();
 builder.Services.AddScoped<IEventSourcingHandler<PostAggregate>, EventSourcingHandler>();
 builder.Services.AddScoped<ICommandHandler, CommandHandler>();
