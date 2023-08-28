@@ -6,7 +6,7 @@ namespace SocialMedia.Query.Domain.Entities
     public class CommentEntity : BaseEntity
     {
         public Guid PostId { get; set; }
-        public string Author { get; set; }
+        public string Username { get; set; }
         public string Comment { get; set; }
         public bool Edited { get; set; }
 
