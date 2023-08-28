@@ -2,6 +2,7 @@ using CQRS.Core.Domain;
 using CQRS.Core.Events;
 using CQRS.Core.Exceptions;
 using CQRS.Core.Infrastructure;
+using CQRS.Core.Producers;
 using SocialMedia.Command.Domain.Aggregates;
 
 namespace SocialMedia.Command.Infrastructure.Events
@@ -9,10 +10,13 @@ namespace SocialMedia.Command.Infrastructure.Events
     public class EventStore : IEventStore
     {
         private readonly IEventStoreRepository _eventStoreRepository;
+        private readonly IEventProducer _eventProducer;
 
-        public EventStore(IEventStoreRepository eventStoreRepository)
+        public EventStore(IEventStoreRepository eventStoreRepository,
+                                     IEventProducer eventProducer)
         {
             _eventStoreRepository = eventStoreRepository;
+            _eventProducer = eventProducer;
         }
 
         public async Task<List<BaseEvent>> GetEventsAsync(Guid aggregateId)
@@ -59,6 +63,10 @@ namespace SocialMedia.Command.Infrastructure.Events
                 };
 
                 await _eventStoreRepository.SaveAsync(eventModel);
+
+                // Producing event to Kafka
+                string topic = Environment.GetEnvironmentVariable("KAFKA_TOPIC");
+                await _eventProducer.ProduceAsync(topic, @event);
             }
         }
     }
