@@ -7,7 +7,6 @@ namespace SocialMedia.Common.Events
         public PostDeletedEvent() : base(nameof(PostDeletedEvent))
         { }
 
-        public Guid PostId { get; set; }
         public string Username { get; set; }
         public DateTime DeletedAt { get; set; }
     }
