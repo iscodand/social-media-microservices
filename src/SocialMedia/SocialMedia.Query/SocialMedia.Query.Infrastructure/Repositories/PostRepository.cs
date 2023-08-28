@@ -5,11 +5,11 @@ using SocialMedia.Query.Infrastructure.DataAccess;
 
 namespace SocialMedia.Query.Infrastructure.Repositories
 {
-    public class PostsRepository : GenericRepository<PostEntity>, IPostsRepository
+    public class PostRepository : GenericRepository<PostEntity>, IPostRepository
     {
         private readonly DbSet<PostEntity> _posts;
 
-        public PostsRepository(ApplicationDbContext context) : base(context)
+        public PostRepository(ApplicationDbContext context) : base(context)
         {
             _posts = context.Posts;
         }

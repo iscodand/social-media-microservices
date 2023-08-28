@@ -4,9 +4,9 @@ using SocialMedia.Query.Infrastructure.DataAccess;
 
 namespace SocialMedia.Query.Infrastructure.Repositories
 {
-    public class CommentsRepository : GenericRepository<CommentEntity>, ICommentsRepository
+    public class CommentRepository : GenericRepository<CommentEntity>, ICommentRepository
     {
-        public CommentsRepository(ApplicationDbContext context) : base(context)
+        public CommentRepository(ApplicationDbContext context) : base(context)
         {
         }
     }
