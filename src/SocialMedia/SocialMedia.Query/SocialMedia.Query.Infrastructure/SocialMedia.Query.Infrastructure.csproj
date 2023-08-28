@@ -14,7 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\CQRS\CQRS.Core\CQRS.Core.csproj" />
     <ProjectReference Include="..\SocialMedia.Query.Domain\SocialMedia.Query.Domain.csproj" />
+    <ProjectReference Include="..\..\SocialMedia.Common\SocialMedia.Common.csproj" />
   </ItemGroup>
 
 </Project>
