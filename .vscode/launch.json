@@ -20,7 +20,9 @@
                 "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
             },
             "env": {
-                "ASPNETCORE_ENVIRONMENT": "Development"
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "http://localhost:8000",
+                "KAFKA_TOPIC": "SocialMediaEventSource"
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"
@@ -45,7 +47,9 @@
                 "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
             },
             "env": {
-                "ASPNETCORE_ENVIRONMENT": "Development"
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "http://localhost:9000",
+                "KAFKA_TOPIC": "SocialMediaEventSource"
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"
